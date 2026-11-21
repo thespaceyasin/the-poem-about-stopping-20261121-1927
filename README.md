@@ -1,8 +1,8 @@
 # The Place She Stopped
 
-[![make.fun](https://make.fun/badge.svg)](https://make.fun)
-[![make.fun bounty](https://make.fun/badge-bounty.svg)](https://make.fun/bounty/the-poem-about-stopping-20261121-1927)
-[![make.fun entry](https://make.fun/badge-entry.svg)](https://make.fun/bounty/the-poem-about-stopping-20261121-1927)
+[![make.fun · the-poem-about-stopping-20261121-1927](https://make.fun/badge/the-poem-about-stopping-20261121-1927.svg)](https://make.fun/bounty/the-poem-about-stopping-20261121-1927?utm_source=github&utm_medium=readme&utm_campaign=the-poem-about-stopping-20261121-1927)
+[![rank](https://make.fun/badge/the-poem-about-stopping-20261121-1927/thespaceyasin/the-poem-about-stopping-20261121-1927/rank.svg)](https://make.fun/bounty/the-poem-about-stopping-20261121-1927/leaderboard?utm_source=github&utm_medium=readme&utm_campaign=the-poem-about-stopping-20261121-1927)
+[![reward](https://make.fun/badge/the-poem-about-stopping-20261121-1927/thespaceyasin/the-poem-about-stopping-20261121-1927/reward.svg)](https://make.fun/bounty/the-poem-about-stopping-20261121-1927?utm_source=github&utm_medium=readme&utm_campaign=the-poem-about-stopping-20261121-1927)
 
 A short poem about agency: the power to stop and to stay. Entry for the
 make.fun bounty
