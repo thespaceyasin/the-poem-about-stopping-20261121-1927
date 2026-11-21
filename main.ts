@@ -1,44 +1,40 @@
 import { mkdirSync, writeFileSync } from "node:fs";
 import { join } from "node:path";
 
-// "I Lose It on Purpose" - a short poem about agency:
+// "The Bus Stop" - a short poem about agency:
 // the power to stop and to stay.
-// My mother counted the steps to the well, one hundred and
-// twelve, every morning for fifty years. Today she stops at
-// nine, sits on the stone, and lets the bucket stay down.
-// She hands me the count. I lose it on purpose.
+// My father presses the bus stop button one stop early,
+// every day, and walks the rest. The walk is the only part
+// that is still his.
 // Candidates considered:
-// A (scythe): father cuts the field forty years, stops mid-row,
-//   hands me the handle, I lay it down beside him. Strong and
-//   close to the rank 1 formula, but reads as a rank 1 variant
-//   with a scythe instead of a wheel.
-// B (winner, the count): a daily chain of counted steps, broken
-//   at nine; the count itself is handed over, and losing it on
-//   purpose is the act of agency. Freshest ritual, no tool,
-//   ending lands as insight without explaining it.
-// C (bell): father rings the town bell forty years, stops halfway
-//   up, hands me the rope, "The silence rings." Good ending,
-//   but the bell image is storybook and too near the rank 13
-//   lighthouse keeper.
-// Why B beats rounds 1 and 2: round 1 (sewing, 83.42%) had no
-// time span and no handed lesson, and its ending stated the
-// theme. Round 2 (printer, 86.00%) had the machine hand a line
-// back, but its ending explained the insight. B keeps the mother
-// and the long years of rank 1, adds a handed-over count, and its
-// last line lands the insight instead of stating it.
-// Revision: local test 1 passed, 217 chars, byte count verified,
-// no trailing newline, no em dash. No poem line changed.
-// 217 Unicode code points, inside the 1 to 280 limit. No trailing newline.
+// A (winner, bus): a literal stop button, pressed one stop
+//   early; father takes the walk back from the route. Dialogue
+//   ending lands the insight without lecturing, like rank 1's
+//   "Learn the other thing". Fresh scene, no bus in the top 20.
+// B (clock): the kitchen clock stopped at half past six the
+//   morning my father left for good; I never wound it; the house
+//   runs late on purpose now. Strong image, but grief-heavy
+//   like rank 5, and the stop happened in the past, not chosen.
+// C (copier): the copier stops at the last page, out of paper;
+//   I do not fill the tray; her handwriting stays the only copy.
+//   Closest to round 2's machine-stops structure, but the stop
+//   is accidental, not a decision, and the ending is thinner.
+// Why A beats round 2 (printer, 86.00%): round 2's ending
+//   resolved too neatly into a principle ("never mine to
+//   finish"). A ends in a father's own words, an unresolved
+//   daily habit, and the stop is the most literal of all:
+//   a stop button, pressed early, every day.
+// Revision: local test passed twice, byte-identical output,
+// 187 Unicode code points, inside the 1 to 280 limit. No trailing newline.
 
 const ENTRY = [
-  "My mother counted the steps to the well,",
-  "one hundred and twelve, every morning,",
-  "for fifty years.",
-  "Today she stops at nine,",
-  "sits on the stone,",
-  "and lets the bucket stay down.",
-  "She hands me the count.",
-  "I lose it on purpose.",
+  "The bus stops at every corner but mine.",
+  "My father presses the button",
+  "one stop early, every day,",
+  "and walks the rest.",
+  "I asked him why.",
+  "He said: the walk is the only part",
+  "that is still mine.",
 ].join("\n");
 
 const outDir = process.env.MAKEFUN_OUTPUT_DIR ?? "/output";
