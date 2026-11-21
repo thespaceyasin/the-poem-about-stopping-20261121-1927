@@ -1,25 +1,33 @@
 import { mkdirSync, writeFileSync } from "node:fs";
 import { join } from "node:path";
 
-// "The Place She Stopped" - a short poem about agency:
+// "The Letter He Did Not Finish" - a short poem about agency:
 // the power to stop and to stay.
-// A foot lifts off a sewing machine pedal; the needle stops
-// half a stitch from done, and the speaker keeps the place
-// her grandmother stopped instead of finishing it.
-// Chosen over a washing machine poem (ending did not land)
-// and a tape recorder poem (last lines turned abstract).
-// 241 Unicode code points, inside the 1 to 280 limit. No trailing newline.
+// A printer works all night on my father's letters, then stops
+// mid-page and leaves the last line blank. The speaker refuses
+// to fill it in: finishing his sentence would take his agency.
+// Candidates considered:
+// A (winner, printer): machine stops and hands the human line back,
+//   twist ending "His sentence was never mine to finish."
+// B (record player): I lift the needle before my mother's last verse;
+//   "The song stays hers because I let it stop." Strong, but the
+//   ending explains the insight instead of landing it.
+// C (bus): mother waves me on from the step; I take her seat and
+//   leave it empty all the way home. Moving, but less about the
+//   power to act than about grief, and no handing back.
+// Revision: cut "one after another, in his hand." It echoed the
+// rank 3 handwriting machine and added nothing the poem needs.
+// 214 Unicode code points, inside the 1 to 280 limit. No trailing newline.
 
 const ENTRY = [
-  "The sewing machine hums on.",
-  "My foot is still on the pedal",
-  "when I lift it.",
-  "The needle stops above the cloth,",
-  "half a stitch from done.",
-  "My grandmother's scarf waits,",
-  "one loose thread in my hand.",
-  "I do not finish it.",
-  "I keep the place she stopped.",
+  "The printer works all night",
+  "on my father's letters.",
+  "At dawn it stops mid-page",
+  "and leaves the last line blank.",
+  "The ink dries where he stopped.",
+  "I do not fill it in.",
+  "His sentence was never mine",
+  "to finish.",
 ].join("\n");
 
 const outDir = process.env.MAKEFUN_OUTPUT_DIR ?? "/output";
