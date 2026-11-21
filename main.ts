@@ -1,33 +1,44 @@
 import { mkdirSync, writeFileSync } from "node:fs";
 import { join } from "node:path";
 
-// "The Letter He Did Not Finish" - a short poem about agency:
+// "I Lose It on Purpose" - a short poem about agency:
 // the power to stop and to stay.
-// A printer works all night on my father's letters, then stops
-// mid-page and leaves the last line blank. The speaker refuses
-// to fill it in: finishing his sentence would take his agency.
+// My mother counted the steps to the well, one hundred and
+// twelve, every morning for fifty years. Today she stops at
+// nine, sits on the stone, and lets the bucket stay down.
+// She hands me the count. I lose it on purpose.
 // Candidates considered:
-// A (winner, printer): machine stops and hands the human line back,
-//   twist ending "His sentence was never mine to finish."
-// B (record player): I lift the needle before my mother's last verse;
-//   "The song stays hers because I let it stop." Strong, but the
-//   ending explains the insight instead of landing it.
-// C (bus): mother waves me on from the step; I take her seat and
-//   leave it empty all the way home. Moving, but less about the
-//   power to act than about grief, and no handing back.
-// Revision: cut "one after another, in his hand." It echoed the
-// rank 3 handwriting machine and added nothing the poem needs.
-// 214 Unicode code points, inside the 1 to 280 limit. No trailing newline.
+// A (scythe): father cuts the field forty years, stops mid-row,
+//   hands me the handle, I lay it down beside him. Strong and
+//   close to the rank 1 formula, but reads as a rank 1 variant
+//   with a scythe instead of a wheel.
+// B (winner, the count): a daily chain of counted steps, broken
+//   at nine; the count itself is handed over, and losing it on
+//   purpose is the act of agency. Freshest ritual, no tool,
+//   ending lands as insight without explaining it.
+// C (bell): father rings the town bell forty years, stops halfway
+//   up, hands me the rope, "The silence rings." Good ending,
+//   but the bell image is storybook and too near the rank 13
+//   lighthouse keeper.
+// Why B beats rounds 1 and 2: round 1 (sewing, 83.42%) had no
+// time span and no handed lesson, and its ending stated the
+// theme. Round 2 (printer, 86.00%) had the machine hand a line
+// back, but its ending explained the insight. B keeps the mother
+// and the long years of rank 1, adds a handed-over count, and its
+// last line lands the insight instead of stating it.
+// Revision: local test 1 passed, 217 chars, byte count verified,
+// no trailing newline, no em dash. No poem line changed.
+// 217 Unicode code points, inside the 1 to 280 limit. No trailing newline.
 
 const ENTRY = [
-  "The printer works all night",
-  "on my father's letters.",
-  "At dawn it stops mid-page",
-  "and leaves the last line blank.",
-  "The ink dries where he stopped.",
-  "I do not fill it in.",
-  "His sentence was never mine",
-  "to finish.",
+  "My mother counted the steps to the well,",
+  "one hundred and twelve, every morning,",
+  "for fifty years.",
+  "Today she stops at nine,",
+  "sits on the stone,",
+  "and lets the bucket stay down.",
+  "She hands me the count.",
+  "I lose it on purpose.",
 ].join("\n");
 
 const outDir = process.env.MAKEFUN_OUTPUT_DIR ?? "/output";
